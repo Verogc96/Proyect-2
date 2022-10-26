@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="utf-8"/>
-		<title>View Ride</title>
-        <link rel="stylesheet" href="RideStyles.css"/>
-        <link rel="stylesheet" href="GeneralStyle.css"/>
-	</head>
-    <body>
-        <img src="logo.png" alt = "logo image" width="200">
-    <div class = "navBar">
-        <table class = "navigationBar">
+
+<head>
+    <meta charset="utf-8" />
+    <title>View Ride</title>
+    <link rel="stylesheet" href="RideStyles.css" />
+    <link rel="stylesheet" href="GeneralStyle.css" />
+</head>
+
+<body>
+    <img src="logo.png" alt="logo image" width="200">
+    <div class="navBar">
+        <table class="navigationBar">
             <tr>
                 <th><a href="">Dashboard</a></th>
-                <th><a href="">Rides</a></th> 
+                <th><a href="">Rides</a></th>
                 <th><a href="">Settings</a></th>
-            </tr>       
+            </tr>
         </table>
-    </div> 
-    <div class = "welcome">
+    </div>
+    <div class="welcome">
         <p>Welcome <span id="user">vgutierrez</span></p><br>
     </div>
-    <p><a href="Dashboard.html">Dashboard </a><span style="font-size: larger;"> < </span><a href="Dashboard.html">Rides</a><span style="font-size: larger;"> < </span>Edit </p>
-    
-    <div class = "frmRides">
-    <form>
-        <header>
-            <label for="ridename">Ride Name:</label><br>
-            <input type="text" id="ridename" name="ridename" value = "Brete" disabled><br>
-        </header>
-        <body>
-            <div class = "secondinput">
-                <label for="startfrom">Start from:</label><br>
-                <input type="text" id="startfrom" name="startfrom" value = "Barrio Los Angeles, Ciudad Quesada" disabled><br>
-            </div>
-            <div class = rightPosition>
-                <label for="end">End:</label><br>
-                <input type="text" id="end" name="end" value = "Mercado Municipal, Ciudad Quesada" disabled><br>
-            </div>
-        </body>
+    <p><a href="Dashboard.html">Dashboard </a><span style="font-size: larger;">
+            < </span><a href="Dashboard.html">Rides</a><span style="font-size: larger;">
+                    < </span>Edit </p>
 
-        <footer>
-            <div class = "description">
-                <h3>Description</h3>
-                <textarea id="description" name="description" rows="6" cols="100" placeholder = "This is my everyday ride, from Barrio Los Angeles to my job's office in Second Floor of Coopeservidores Building" disabled></textarea><br>  
-            </div>
-        </footer>
-    </form>
-        
-    </div>    
-        <div class ="frmRidesWhen">
-            <h3>When</h3>
-            <form>
-                <div class = rideAdditionalDetails>
-                <label for="departure">Departure:</label><br>
-                <input type="text" id="departure" name="departure" value = "6:45 AM" disabled><br>    
-                <label for="Estimated Arrival">Estimated Arrival:</label><br>
-                <input type="text" id="departure" name="departure" value = "7:05 AM" disabled><br> 
+    <div class="frmRides">
+        <form>
+            <header>
+                <label for="ridename">Ride Name:</label><br>
+                <input type="text" id="ridename" name="ridename" value="Brete" disabled><br>
+            </header>
+
+            <body>
+                <div class="secondinput">
+                    <label for="startfrom">Start from:</label><br>
+                    <input type="text" id="startfrom" name="startfrom" value="Barrio Los Angeles, Ciudad Quesada"
+                        disabled><br>
                 </div>
-                <div class = "days">
-                    <h4>Select Days</h4>
-                    <input type="checkbox" id="monday" name="monday" value="monday" disabled>
-                    <label for="monday"> Monday</label><br>
-                    <input type="checkbox" id="tuesday" name="tuesday" value="tuesday" disabled>
-                    <label for="tuesday"> Tuesday</label><br>
-                    <input type="checkbox" id="wednesday" name="wednesday" value="wednesday" disabled>
-                    <label for="wednesday"> Wednesday</label><br>
-                    <input type="checkbox" id="thursday" name="thursday" value="thursday" disabled>
-                    <label for="thursday"> Thursday</label><br>
-                    <input type="checkbox" id="friday" name="friday" value="friday" disabled>
-                    <label for="friday"> Friday</label><br> 
-                    <input type="checkbox" id="saturday" name="saturday" value="saturday" disabled>
-                    <label for="saturday"> Saturday</label><br> 
-                    <input type="checkbox" id="sunday" name="sunday" value="sunday" disabled>
-                    <label for="sunday"> Sunday</label><br>  
+                <div class=rightPosition>
+                    <label for="end">End:</label><br>
+                    <input type="text" id="end" name="end" value="Mercado Municipal, Ciudad Quesada" disabled><br>
                 </div>
-                <p><a id="cancelButton" href="Dashboard.html">Cancel</a></p> 
-                <p><a href="Dashboard.html"><span id="btnSave">Save</span></a></p> 
-            </form>
-    
+            </body>
+
+            <footer>
+                <div class="description">
+                    <h3>Description</h3>
+                    <textarea id="description" name="description" rows="6" cols="100"
+                        placeholder="This is my everyday ride, from Barrio Los Angeles to my job's office in Second Floor of Coopeservidores Building"
+                        disabled></textarea><br>
+                </div>
+            </footer>
+        </form>
 
     </div>
-    </body>
+    <div class="frmRidesWhen">
+        <h3>When</h3>
+        <form>
+            <div class=rideAdditionalDetails>
+                <label for="departure">Departure:</label><br>
+                <input type="text" id="departure" name="departure" value="6:45 AM" disabled><br>
+                <label for="Estimated Arrival">Estimated Arrival:</label><br>
+                <input type="text" id="departure" name="departure" value="7:05 AM" disabled><br>
+            </div>
+            <div class="days">
+                <h4>Select Days</h4>
+                <input type="checkbox" id="monday" name="monday" value="monday" disabled>
+                <label for="monday"> Monday</label><br>
+                <input type="checkbox" id="tuesday" name="tuesday" value="tuesday" disabled>
+                <label for="tuesday"> Tuesday</label><br>
+                <input type="checkbox" id="wednesday" name="wednesday" value="wednesday" disabled>
+                <label for="wednesday"> Wednesday</label><br>
+                <input type="checkbox" id="thursday" name="thursday" value="thursday" disabled>
+                <label for="thursday"> Thursday</label><br>
+                <input type="checkbox" id="friday" name="friday" value="friday" disabled>
+                <label for="friday"> Friday</label><br>
+                <input type="checkbox" id="saturday" name="saturday" value="saturday" disabled>
+                <label for="saturday"> Saturday</label><br>
+                <input type="checkbox" id="sunday" name="sunday" value="sunday" disabled>
+                <label for="sunday"> Sunday</label><br>
+            </div>
+            <p><a id="cancelButton" href="Dashboard.html">Cancel</a></p>
+            <p><a href="Dashboard.html"><span id="btnSave">Save</span></a></p>
+        </form>
+
+
+    </div>
+</body>
+
 </html>
