@@ -1,13 +1,4 @@
-input[type=text] {
-    width: fit-content;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-#login
+#register
 {
     width: fit-content;
     background-color: #23ac83;

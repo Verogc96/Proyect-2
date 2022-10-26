@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="utf-8"/>
-		<title>Log In Tico Rides</title>
-        <link rel="stylesheet" href="LoginStyle.css"/>
-	</head>
-    <body>
-        <header>
-            <img src="logo.png" alt = "logo image" width="240">
-        </header>
-    <form action="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Log In Tico Rides</title>
+    <link rel="stylesheet" href="LoginStyle.css" />
+    <link rel="stylesheet" href="GeneralStyle.css" />
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="logo image" width="240">
+    </header>
+    <form action="Dashboard.html">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username"><br>
         <label for="password">Password:</label><br>
         <input type="text" id="password" name="password"><br>
-        <br><input type="submit" value="Login">
-    </form>    
-    <p>Not an User? <a href="">Register here.</a>
-    </body>
+        <br><input type="submit" id = "login" value="Login">
+    </form>
+    <p>Not an User? <a href="RegisterUser.html">Register here.</a>
+</body>
+
 </html>

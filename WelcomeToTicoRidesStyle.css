@@ -5,11 +5,17 @@
     font-size: large;
     padding: 10px; /*espacio alrededor texto*/
     background-color: white; /*color botón*/
-    color: black; /*color texto*/
-    border-radius: 50px; /*bordes redondos*/
+    border-radius: 10px; /*bordes redondos*/
     float: right /*ubicar al lado derecho de la pantalla*/;
+    font-size: x-large;
 }
 
+#searchButton{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: rgb(42, 187, 187);
+    border-style: solid;
+}
 
 .searchRide
 {

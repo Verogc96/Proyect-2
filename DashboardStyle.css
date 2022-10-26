@@ -1,6 +1,6 @@
 .navBar
 {
-    width:max-content;
+    width:fit-content;
     background-color: white; 
     border: solid;
     border-radius: 20px;
@@ -12,7 +12,7 @@
 }
 
 
-.navigationBar, th,td
+.navigationBar
 {
     margin-top: 2px;
     margin-right: 2px;
@@ -20,6 +20,7 @@
     margin-left: 2px; 
     padding:5px;  
     text-align: center;
+    border: none;
 }
 
 #user

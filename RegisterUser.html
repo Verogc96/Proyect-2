@@ -3,27 +3,28 @@
     <head>
 		<meta charset="utf-8"/>
 		<title>Register User</title>
-        <link rel="stylesheet" href="RegisterUsersStyle.css"/>
+        <link rel="stylesheet" href="RegisterUserStyle.css"/>
+        <link rel="stylesheet" href="GeneralStyle.css"/>
 	</head>
     <body>
         <header>
             <img src="logo.png" alt = "logo image" width="240"></h1>
         </header>
-    <form action="">
+    <form action="AuthenticationPage.html">
         <label for="firstname">First Name:</label><br>
-        <input type="text" id="firstname" name="firstname"><br>
+        <input type="text" id="firstname" name="firstname" placeholder="Veronica"><br>
         <label for="lastname">Last Name:</label><br>
-        <input type="text" id="lastname" name="lastname"><br>
+        <input type="text" id="lastname" name="lastname" placeholder="Gutierrez"><br>
         <label for="phone">Phone:</label><br>
-        <input type="text" id="phone" name="phone"><br>
+        <input type="text" id="phone" name="phone" placeholder="(506) 8557-7823)"><br>
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
+        <input type="text" id="username" name="username" placeholder="Vero521"><br>
         <label for="password">Password:</label><br>
-        <input type="text" id="password" name="password"><br>
+        <input type="text" id="password" name="password" placeholder="***************"><br>
         <label for="repeatpassword">Repeat Password:</label><br>
-        <input type="text" id="repeatpassword" name="repeatpassword"><br>
-        <p>Already an User? <a href="">Login here.</a><br>
-        <br><input type="submit" value="Register">
+        <input type="text" id="repeatpassword" name="repeatpassword" placeholder="***************"><br>
+        <p>Already an User? <a href="AuthenticationPage.html">Login here.</a><br>
+        <br><input type="submit" id = "register" value="Register">
     </form>       
     </body>
 </html>

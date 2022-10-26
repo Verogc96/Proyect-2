@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="utf-8"/>
-		<title>Dashboard</title>
-        <link rel="stylesheet" href="DashboardStyle.css"/>
-	</head>
-    <body>
-        <img src="logo.png" alt = "logo image" width="200">
-    <div class = "navBar">
-        <table class = "navigationBar">
-            <tr>
-                <th><a href="">Dashboard</a></th>
-                <th><a href="">Rides</a></th> 
-                <th><a href="">Settings</a></th>
-            </tr>       
-        </table>
-    </div> 
 
-    <div class = "welcome">
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="DashboardStyle.css" />
+    <link rel="stylesheet" href="GeneralStyle.css" />
+</head>
+
+<body>
+    <img src="logo.png" alt="logo image" width="200">
+    <div class="navBar">
+        <table class="navigationBar">
+            <tr>
+                <th><a href="Dashboard.html">Dashboard</a></th>
+                <th><a href="ViewRide.html">Rides</a></th>
+                <th><a href="Settings.html">Settings</a></th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="welcome">
         <p>Welcome <span id="user">vgutierrez</span></p>
     </div>
     <header>
         <h1>Dashboard</h1>
     </header>
-    <p><a href="Dashboard.html">Dashboard </a><span style="font-size: larger;"> < </span></p>
+    <p><a href="Dashboard.html">Dashboard </a><span style="font-size: larger;">
+            < </span>
+    </p>
     <h2>
         My rides
     </h2>
-    <div class = "myRides">
+    <div class="myRides">
         <h3>Your current list of Rides</h3>
-        <table class = "tblMyRides">
+        <table class="tblMyRides">
             <tr>
                 <th>Name</th>
-                <th>Start</th> 
+                <th>Start</th>
                 <th>End</th>
                 <th>Actions</th>
             </tr>
-              <tr>
+            <tr>
                 <td>Brete</td>
                 <td>Barrio Los Angeles</td>
                 <td>Ciudad Quesada</td>
-                <td><a href="">Edit</a> - <a href="">Delete</a></td>
-              </tr>
-              <tr>
+                <td><a href="EditRide.html">Edit</a> - <a href="">Delete</a></td>
+            </tr>
+            <tr>
                 <td>Casa</td>
                 <td>Ciudad Quesada</td>
                 <td>Los Angeles</td>
-                <td><a href="">Edit</a> - <a href="">Delete</a></td>
-              </tr>
-              <tr>
+                <td><a href="EditRide.html">Edit</a> - <a href="">Delete</a></td>
+            </tr>
+            <tr>
                 <td>Oficina Chepe</td>
                 <td>Ciudad Quesada</td>
                 <td>San Pedro</td>
-                <td><a href="">Edit</a> - <a href="">Delete</a></td>
-              </tr>               
+                <td><a href="EditRide.html">Edit</a> - <a href="">Delete</a></td>
+            </tr>
         </table>
-        <img src="signo+.png" alt = "+ image" width="25">
+        <a href="NewRide.html"><img src="signo+.png" alt="+ image" width="25"/></a>
+        
     </div>
 
-    </body>
+</body>
+
 </html>
