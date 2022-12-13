@@ -4,6 +4,10 @@
     font-size: small;
 }
 
+#person {
+    width: 5%;
+}
+
 .welcome {
     float: right;
 }
