@@ -15,7 +15,11 @@
     border-bottom: solid lightslategray;
 }
 
-#btnSave
+#person {
+    width: 5%;
+}
+
+#btnAddRide
 {
     width: fit-content;
     background-color: #4CAF50;

@@ -6,6 +6,7 @@
     <title>New Ride</title>
     <link rel="stylesheet" href="RideStyles.css" />
     <link rel="stylesheet" href="GeneralStyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <header>
@@ -24,7 +25,7 @@
     </div>
 
     <div class="welcome">
-        <p>Welcome <span id="user">vgutierrez</span></p><br>
+        <p>Welcome <span id="user"></span> <img src="persona.png"  id= "person" alt=""></p>
     </div>
     <p><a href="Dashboard.html">Dashboard </a>&lt;<a href="Dashboard.html"> Rides </a>&lt; Add </p>
 
@@ -38,11 +39,11 @@
             <body>
                 <div class="secondinput">
                     <label for="startfrom">Start from:</label><br>
-                    <input type="text" id="startfrom" name="startfrom" placeholder="Location"><br>
+                    <input type="text" id="rideStartfrom" name="startfrom" placeholder="Location"><br>
                 </div>
                 <div class=rightPosition>
                     <label for="end">End:</label><br>
-                    <input type="text" id="end" name="end" placeholder="Location"><br>
+                    <input type="text" id="rideEnd" name="end" placeholder="Location"><br>
                 </div>
             </body>
 
@@ -83,9 +84,10 @@
                 <label for="sunday"> Sunday</label><br>
             </div>
             <p><a id="cancelButton" href="Dashboard.html">Cancel</a></p>
-            <p><a href="Dashboard.html"><span id="btnSave">Save</span></a></p>
+            <p><span id="btnAddRide">Save</span></p>
         </form>
     </div>
+    <script type="text/javascript" src="CRUD.js"></script>
 </body>
 
 </html>

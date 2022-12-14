@@ -6,15 +6,16 @@
     <title>Edit a Ride</title>
     <link rel="stylesheet" href="RideStyles.css" />
     <link rel="stylesheet" href="GeneralStyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <header>
-    <a href="WelcomeToTicoRides.html"><img src="logo.png" id= "logo" alt="logo image"/></a>
+    <p>Welcome <span id="user"></span> <img src="persona.png"  id= "person" alt=""></p>
 </header>
 
 <body>
     <div>
-        <nav class = "navBar">
+        <nav class="navBar">
             <a href="Dashboard.html">Dashboard</a> |
             <a href="ViewRide.html">Rides</a> |
             <a href="Settings.html">Settings</a>
@@ -81,11 +82,10 @@
                 <label for="sunday"> Sunday</label><br>
             </div>
             <p><a id="cancelButton" href="Dashboard.html">Cancel</a></p>
-            <p><a href="Dashboard.html"><span id="btnSave">Save</span></a></p>
+            <p><a href="Dashboard.html"><span id="btnAddRide">Save</span></a></p>
         </form>
-
-
     </div>
+    <script type="text/javascript" src="CRUD.js"></script>
 </body>
 
 </html>

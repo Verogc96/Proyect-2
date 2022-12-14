@@ -3,45 +3,44 @@ var loggedUser = "";
 var actualUsername = localStorage;
 var actualIdUser = localStorage;
 
-/*var users = [
+/*This code was created just for charge data for the first time
+var users = [
     { "ID": 1, "firstName": "Veronica", "lastName": "Gutierrez", "phone": "8557-7823", "username": "vgutierrez", "password": "123" },
     { "ID": 2, "firstName": "Bladimir", "lastName": "Arroyo", "phone": "8875-1861", "username": "barroyo", "password": "123" }
 ];*/
 
-
-
-/*var userSettings = [
+/*This code was created just for charge data for the first time
+var userSettings = [
     { "userID": '1', fullName: 'Veronica Gutierrez', speedAverage: '60 km/h', aboutMe: 'Something about me goes here' },
     { "userID": '2', fullName: 'Bladimir Arroyo', speedAverage: '80 km/h', aboutMe: 'Something about me goes here' }
 ];*/
 
-let rides = [
+//This code was created just for charge data for the first time
+var rides = [
     {
         "ID": 1, "rideName": "Brete", "startFrom": "Barrio Los Angeles, Ciudad Quesada", "end": "Mercado Municipal, Ciudad Quesada",
         "description": "This is my everyday ride, from Barrio Los Angeles to my job office in Second Floor of Coopeservidores Building",
-        "departure": "6:45 AM", "estimatedArrival": "7:05 AM", "username": 'vgutierrez'
+        "departure": "6:45 AM", "estimatedArrival": "7:05 AM", "username": 'vgutierrez', "days": ["Monday", "Tuesday"]
     },
 
     {
         "ID": 2, "rideName": 'Aeropuerto', "startFrom": 'Barrio San Antonio, Ciudad Quesada', "end": 'AIJS, Alajuela',
         "description": 'This a ride from Ciudad Quesada to Juan Santamaria International Airport',
-        "departure": '8:00 AM', "estimatedArrival": '10:00 AM', "username": 'vgutierrez'
+        "departure": '8:00 AM', "estimatedArrival": '10:00 AM', "username": 'vgutierrez',"days": ["Thursday", "Friday"]
     },
 
     {
         "ID": 3, "rideName": 'Aeropuerto', "startFrom": 'Terminal de Buses, Ciudad Quesada', "end": 'AIJS, Alajuela',
         "description": 'This a ride from Ciudad Quesada to Juan Santamaria International Airport',
-        "departure": '12:00 MD', "estimatedArrival": '02:00 PM', "username": 'barroyo'
+        "departure": '12:00 MD', "estimatedArrival": '02:00 PM', "username": 'barroyo', "days": ["Saturday"]
     },
 
     {
         "ID": 4, "rideName": 'Brete', "startFrom": 'Barrio Los Angeles, Ciudad Quesada', "end": 'Parque Municipal, Ciudad Quesada',
         "description": 'This is my everyday ride, from Barrio Los Angeles to my job office in Municipalidad San Carlos',
-        "departure": '06:30 AM', "estimatedArrival": '06:45 am', "username": 'barroyo'
+        "departure": '06:30 AM', "estimatedArrival": '06:45 am', "username": 'barroyo', "days": ["Monday","Tuesday", "Wednesday", "Thursday", "Friday"]
     }
 ];
-
-
 
 function loadEvents() {
     // bind the click event to login button
@@ -64,43 +63,12 @@ function loadEvents() {
         element.preventDefault();
         modifyUserSettings();
     });
-    /*
-            // bind the click event to all edit buttons
-            for(let i = 0; i < document.getElementsByClassName('edit-button').length; i++){
-              button = document.getElementsByClassName('edit-button')[i];
-              button.addEventListener('click', function(e){
-                editBook(e.currentTarget.dataset.bookid);
-              })
-            };
-      
-            // bind the click event to all delete buttons
-            for(let i = 0; i < document.getElementsByClassName('delete-button').length; i++){
-              button = document.getElementsByClassName('edit-button')[i];
-              button.addEventListener('click', function(e){
-                deleteBook(e.currentTarget.dataset.bookid);
-              })
-            };
-      
-            // bind the click event to the add book button
-            document.getElementById('add-book-button').addEventListener('click', function(){
-              const bookName = document.getElementById('title').value;
-              bookId += 1;
-      
-              const book = {
-                id: bookId,
-                name: bookName,
-                author: 'Tolkien'
-              }
-              let books = JSON.parse(localStorage.getItem("books"));
-              if(!books) {
-                books = [];
-              }
-              books.push(book);
-              localStorage.setItem("books", JSON.stringify(books));
-              localStorage.setItem('bookId', bookId);
-              loadBooks();
-              clearFields();
-            });*/
+
+    jQuery('#btnAddRide').bind('click', function (element) {
+        element.preventDefault();
+        createRide();
+    });
+
 }
 
 function validateLogIn() {
@@ -134,45 +102,31 @@ function loadUser() {
     var actualUser = document.querySelector("#user");
     actualUser.innerHTML = localStorage.getItem("username");
 }
-/*
-function tableStyles() {
-    var table = document.getElementsByClassName("ridesTable");
-
-    table.setAttribute("class", "table");
-    table.setAttribute("class", "table,th,td");
-    table.setAttribute("class", "table tbody tr:nth-child(odd)");
-    table.setAttribute("class", "table tbody tr:nth-child(even)");
-}*/
 
 function createTableRidesperUser() {
+    localStorage.setItem('rides',JSON.stringify(rides))
+    var ridesCopy = JSON.parse(localStorage.getItem("rides"));
     $(".tblMyRides").append('<tr><th>Name</th>' +
         '<th>Start</th>' +
         '<th>End</th>' +
         '<th>Actions</th><tr>');
-    for (var i = 0; i < rides.length; i++) {
-        if (rides[i].username == localStorage.getItem("username")) {
+    for (var i = 0; i < ridesCopy.length; i++) {
+        if (ridesCopy[i].username == localStorage.getItem("username")) {
             $(".tblMyRides").append(
                 '<tr>' +
-                '<td>' + rides[i].rideName + '</td>' +
-                '<td>' + rides[i].startFrom + '</td>' +
-                '<td>' + rides[i].end + '</td>' +
+                '<td>' + ridesCopy[i].rideName + '</td>' +
+                '<td>' + ridesCopy[i].startFrom + '</td>' +
+                '<td>' + ridesCopy[i].end + '</td>' +
                 '<td><a href="EditRide.html">Edit</a> - <a href="">Delete</a></td>' +
                 '</tr>'
             );
         }
     }
 }
-/*
-function deleteFunction() {
-    var rowCount = document.getElementById("tblAllRides").length;
-    var table = document.getElementById("tblAllRides");
-
-    for (var i = rowCount - 1; i > 0; i--) {
-        table.deleteRow(i);
-    }
-}*/
 
 function createGeneralTable() {
+    var ridesCopy = JSON.parse(localStorage.getItem("rides"));
+
     var start = document.getElementById('from').value;
     var end = document.getElementById('to').value;
     var rowCount = document.getElementById("tblAllRides").length;
@@ -187,14 +141,14 @@ function createGeneralTable() {
             table.deleteRow(i);
         }
         tableHeader;
-        for (var i = 0; i < rides.length; i++) {
-            if (rides[i].startFrom == start) {
-                if (rides[i].end == end) {
+        for (var i = 0; i < ridesCopy.length; i++) {
+            if (ridesCopy[i].startFrom == start) {
+                if (ridesCopy[i].end == end) {
                     $(".ridesTable").append(
                         '<tr>' +
-                        '<td>' + rides[i].username + '</td>' +
-                        '<td>' + rides[i].startFrom + '</td>' +
-                        '<td>' + rides[i].end + '</td>' +
+                        '<td>' + ridesCopy[i].username + '</td>' +
+                        '<td>' + ridesCopy[i].startFrom + '</td>' +
+                        '<td>' + ridesCopy[i].end + '</td>' +
                         '<td><a href="ViewRide.html">View</a></td>' +
                         '</tr>'
                     );
@@ -203,14 +157,14 @@ function createGeneralTable() {
         }
     } else {
         tableHeader;
-        for (var i = 0; i < rides.length; i++) {
-            if (rides[i].startFrom == start) {
-                if (rides[i].end == end) {
+        for (var i = 0; i < ridesCopy.length; i++) {
+            if (ridesCopy[i].startFrom == start) {
+                if (ridesCopy[i].end == end) {
                     $(".ridesTable").append(
                         '<tr>' +
-                        '<td>' + rides[i].username + '</td>' +
-                        '<td>' + rides[i].startFrom + '</td>' +
-                        '<td>' + rides[i].end + '</td>' +
+                        '<td>' + ridesCopy[i].username + '</td>' +
+                        '<td>' + ridesCopy[i].startFrom + '</td>' +
+                        '<td>' + ridesCopy[i].end + '</td>' +
                         '<td><a href="ViewRide.html">View</a></td>' +
                         '</tr>'
                     );
@@ -260,9 +214,9 @@ function fillOutSettingsForm() {
 
     var dbSettings = JSON.parse(localStorage.getItem('userSettings'));
     var resultado = dbSettings.find(e => e.userID == JSON.parse(localStorage.getItem('ID')));
-    document.getElementById('fullname').value= resultado.fullName;
-    document.getElementById('speedaverage').value= resultado.speedAverage;
-    document.getElementById('aboutme').value= resultado.aboutMe;
+    document.getElementById('fullname').value = resultado.fullName;
+    document.getElementById('speedaverage').value = resultado.speedAverage;
+    document.getElementById('aboutme').value = resultado.aboutMe;
 }
 
 
@@ -284,7 +238,35 @@ function modifyUserSettings() {
     window.location.href = "Dashboard.html";
 }
 
-loadUser();
+function createRide() {
+    var ridesCopy = JSON.parse(localStorage.getItem("rides"));
+
+    var inRideName = document.getElementById('ridename').value;
+    var inStartFrom = document.getElementById('rideStartfrom').value;
+    var inRideEnd = document.getElementById('rideEnd').value;
+    var inDescription = document.getElementById('description').value;
+    var inDeparture = document.getElementById('departure').value;
+    var inArrival = document.getElementById('arrival').value;
+    var daysArray = [];
+    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+    var username = localStorage.getItem('username');
+
+    for (var i = 0; i < checkboxes.length; i++) {
+        daysArray.push(checkboxes[i].value)
+    }
+
+    ride = {
+        "ID": ridesCopy.length + 1, "rideName": inRideName, "startFrom": inStartFrom, "end": inRideEnd, "description": inDescription,
+        "departure": inDeparture, "estimatedArrival": inArrival, "username": username, "days": daysArray
+    };
+
+    localStorage.setItem('rides', JSON.stringify(ride));
+    window.alert("Ride add correctly");
+}
+
+
+//loadUser();
 createTableRidesperUser();
-fillOutSettingsForm();
+//fillOutSettingsForm();
 loadEvents();
+
