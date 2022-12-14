@@ -8,6 +8,10 @@
     float: right;
 }
 
+#person {
+    width: 5%;
+}
+
 input[type=text] {
     width: fit-content;
     padding: 12px 20px;

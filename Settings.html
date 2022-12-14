@@ -6,6 +6,7 @@
     <title>Settings</title>
     <link rel="stylesheet" href="SettingsStyle.css" />
     <link rel="stylesheet" href="GeneralStyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <header>
@@ -22,25 +23,25 @@
     </div>
     
     <div class="welcome">
-        <p>Welcome <span id="user">vgutierrez</span></p><br>
+        <p>Welcome <span id="user"></span> <img src="persona.png"  id= "person" alt=""></p>
     </div>
     <p><a href="Dashboard.html">Dashboard </a>&lt; Settings </p>
     <h2>Settings</h2>
-    <div class="frmSettings">
+    <div class="frmSettings" id= "frmSettingsUser" name = "frmUserSettings">
         <form>
             <label for="fullname">Full Name:</label><br>
-            <input type="text" id="fullname" name="fullname" placeholder="Veronica Gutierrez Castro"><br>
+            <input type="text" id="fullname" name="fullname" value = ""><br>
             <label for="speedaverage">Speed Average:</label><br>
-            <input type="text" id="speedaverage" name="speedaverage" placeholder="60 km/h"><br>
+            <input type="text" id="speedaverage" name="speedaverage" value = ""><br>
             <label for="aboutme">About me:</label><br>
-            <textarea id="aboutme" name="aboutme" rows="6" cols="100"
-                placeholder="Something about me goes here"></textarea><br>
+            <textarea id="aboutme" name="aboutme" rows="6" cols="100" value = ""></textarea>
         </form>
         <p><a
                 href="Dashboard.html">Cancel</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="Dashboard.html"><span id="btnSave">Save</span></a>
         </p>
     </div>
+    <script type="text/javascript" src="CRUD.js"></script>
 </body>
 
 </html>

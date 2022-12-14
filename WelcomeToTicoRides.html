@@ -6,6 +6,7 @@
     <title>WelcomeToTicoRides</title>
     <link rel="stylesheet" href="WelcomeToTicoRidesStyle.css" />
     <link rel="stylesheet" href="GeneralStyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -27,9 +28,9 @@
         </form>
     </div>
     <h3>Results for Rides that matches your criteria</h3>
-    <div class="ridesTable">
-        <table>
-            <tr>
+    <div>
+        <table class="ridesTable" id = "tblAllRides">
+            <!--<tr>
                 <th>User</th>
                 <th>Start</th>
                 <th>End</th>
@@ -52,9 +53,10 @@
                 <td>Escazu</td>
                 <td>Aeropuerto</td>
                 <td><a href="ViewRide.html">View</a></td>
-            </tr>
+            </tr>-->
         </table>
     </div>
+    <script type="text/javascript" src="CRUD.js"></script>
 </body>
 
 </html>
