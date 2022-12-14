@@ -23,6 +23,7 @@
 }
 
 .searchRide {
+    width: fit-content;
     background: white;
     border-color: black;
     border-width: thin;
@@ -36,7 +37,7 @@
 }
 
 table {
-    width: 98%;
+    width: fit-content;
 }
 
 table,
